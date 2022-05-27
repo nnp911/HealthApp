@@ -1,11 +1,11 @@
-//import java.util.*;
+import java.util.Objects;
 public class User{
-    private Long id; //身份证
-    private String phone; //unique +86 only
+    private final String id; //身份证
+    private final String phone; //unique +86 only
     private String username;
     private String password;
 
-    public User(Long id, String phone, String username, String password){
+    public User(String id, String phone, String username, String password){
         this.id = id;
         this.phone = phone;
         this.username = username;
@@ -22,6 +22,30 @@ public class User{
         }
         User user = (User) o;
         return Objects.equals(id, user.id) && Objects.equals(username, user.username);
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }

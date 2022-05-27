@@ -1,46 +1,46 @@
 public interface UserService{
-    /*
+    /**
      * Create user account
-     * @param take user obj store into some data structure
+     * @param info take user obj store into some data structure
      */
     void create(User info);
 
-    /*
+    /**
      * edit user information
      * @param info
      */
     void update(User info);
 
-    /*
+    /**
      * delete by id
      * @param id
      */
-    void delete(long id);
+    void delete(String id);
 
-    /*
+    /**
      * search by id
      * @param id
      * @return
      */
-    User searchId(long id);
+    User searchId(String id);
 
-    /*
+    /**
      * search by name
-     * @param userName
+     * @param name
      * @return user
      */
     User searchName(String name);
 
-    /*
+    /**
      * change password
-     * @param username
-     * @param Password
+     * @param name
+     * @param password
      */
     void changePass(String name, String password);
 
-    /*
+    /**
      * change phone number
-     * @param username
+     * @param name
      * @param phone num
      */
     void changePhone(String name, String phone);
