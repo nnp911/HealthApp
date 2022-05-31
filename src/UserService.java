@@ -1,15 +1,15 @@
 public interface UserService{
     /**
-     * Create user account
+     * add user account
      * @param info take user obj store into some data structure
      */
-    void create(User info);
+    void add(User info) throws Exception;
 
     /**
      * edit user information
      * @param info
      */
-    void update(User info);
+    void update(User info) throws Exception;
 
     /**
      * delete by id
@@ -32,17 +32,24 @@ public interface UserService{
     User searchName(String name);
 
     /**
+     * search by phone
+     * @param phone
+     * @return user
+     */
+    User searchPhone(String phone);
+
+    /**
      * change password
-     * @param name
+     * @param id
      * @param password
      */
-    void changePass(String name, String password);
+    void changePass(String id, String password) throws Exception;
 
     /**
      * change phone number
-     * @param name
+     * @param id
      * @param phone num
      */
-    void changePhone(String name, String phone);
+    void changePhone(String id, String phone) throws Exception;
 
 }

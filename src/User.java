@@ -1,8 +1,8 @@
 import java.util.Objects;
 public class User{
-    private final String id; //身份证
-    private final String phone; //unique +86 only
-    private String username;
+    private final String id; //unique id
+    private String phone; //unique +86 only
+    private String username; //unique username
     private String password;
 
     public User(String id, String phone, String username, String password){
@@ -30,6 +30,10 @@ public class User{
 
     public String getPhone() {
         return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getUsername() {
